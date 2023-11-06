@@ -6,7 +6,6 @@ import { AiOutlinePlus } from "react-icons/ai";
 const Library = () => {
   const onClick = () => {
     // handle upload for library
-    console.log("new library created");
   };
 
   return (
