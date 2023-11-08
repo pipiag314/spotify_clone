@@ -5,6 +5,7 @@ import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
 import { HiHome } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import Button from "./Button";
+import useAuthModel from "@/hooks/useAuthModel";
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -12,6 +13,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ children }) => {
   const router = useRouter();
+  const authModal = useAuthModel()
 
   return (
     <div className={twMerge(`
@@ -106,7 +108,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
                 <>
                     <div>
                         <Button
-                            onClick={() => {}}
+                            onClick={authModal.onOpen}
                             className="
                                 bg-transparent
                                 text-neutral-300
@@ -117,7 +119,7 @@ const Header: React.FC<HeaderProps> = ({ children }) => {
                     </div>
                     <div>
                         <Button
-                            onClick={() => {}}
+                            onClick={authModal.onOpen}
                             className="
                                 bg-white
                                 px-6
