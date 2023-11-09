@@ -1,6 +1,6 @@
 "use client";
 
-import useAuthModel from "@/hooks/useAuthModel";
+import useAuthModal from "@/hooks/useAuthModal";
 import Modal from "./Modal";
 
 import {
@@ -16,7 +16,7 @@ const AuthModal = () => {
   const supabaseClient = useSupabaseClient();
   const router = useRouter();
   const { session } = useSessionContext();
-  const {onClose, isOpen} = useAuthModel()
+  const {onClose, isOpen} = useAuthModal()
 
   const onChange = (open: boolean) => {
     if(!open) {
